@@ -3,11 +3,10 @@
 <head>
 	<!-- css -->
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/kurasa.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/elias.min.css">
 	<!-- /end css -->
 </head>
 <body>
-<p>This is just a simple example to show you how the plugin works with PDF</p>
 
 <!-- flipbook markup -->
 <div id="flipbook" style="height:750px;"></div>
@@ -16,7 +15,7 @@
 <!-- scripts-section -->
 <script type="text/javascript" src="assets/js/jquery.min.js"></script>
 <script type="text/javascript" src="assets/js/pdf.min.js"></script>
-<script type="text/javascript" src="assets/js/jquery.kurasa.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.elias.min.js"></script>
 <script>
 $(document).ready(function() {
 	var options = {
@@ -71,18 +70,18 @@ $(document).ready(function() {
 		],
 	};
 	
-	$('#flipbook').kurasa(options);
+	$('#flipbook').elias(options);
 	
 	// Events
-	$('#flipbook').on('kurasa:ready', function(e, plugin) {
+	$('#flipbook').on('elias:ready', function(e, plugin) {
 		console.log('event:ready');
 	});
 	
-	$('#flipbook').on('kurasa:showpage', function(e, plugin, page) {
+	$('#flipbook').on('elias:showpage', function(e, plugin, page) {
 		console.log('event:showpage [' + page + ']');
 	});
 	
-	$('#flipbook').on('kurasa:hidepage', function(e, plugin, page) {
+	$('#flipbook').on('elias:hidepage', function(e, plugin, page) {
 		console.log('event:hidepage [' + page + ']');
 	});
 });
